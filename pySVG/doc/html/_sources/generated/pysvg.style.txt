@@ -14,11 +14,11 @@ Inheritance diagram for ``pysvg.style``:
 
 .. currentmodule:: pysvg.style
 
-:class:`Style`
+:class:`style`
 --------------
 
 
-.. autoclass:: Style
+.. autoclass:: style
   :members:
   :undoc-members:
   :show-inheritance:

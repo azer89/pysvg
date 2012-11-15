@@ -39,8 +39,7 @@ def build(node_, object):
         nodeName_ = child_.nodeName.split(':')[-1]
         if child_.nodeType == Node.ELEMENT_NODE:
             try:
-                capitalLetter = string.upper(nodeName_[0])
-                objectinstance=eval(capitalLetter+nodeName_[1:]) ()                
+                objectinstance=eval(nodeName_)()                
             except:
                 print 'no class for: '+nodeName_
                 continue
@@ -66,7 +65,7 @@ def build(node_, object):
 def parse(inFileName):
     doc = minidom.parse(inFileName)
     rootNode = doc.documentElement
-    rootObj = Svg()
+    rootObj = svg()
     build(rootNode,rootObj)
     # Enable Python to collect the space used by the DOM.
     doc = None

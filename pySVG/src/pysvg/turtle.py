@@ -3,7 +3,7 @@
 For licensing information please refer to license.txt
 '''
 import math
-from shape import Polyline
+from shape import polyline
 
 class Vector(object):
     """
@@ -178,7 +178,7 @@ class Turtle(object):
             s = ''
             for point in self._pointsOfPolyline:
                 s += str(point) + ' '#str(point.x) + ',' + str(point.y) + ' '
-            p = Polyline(s)
+            p = polyline(s)
             p.set_style('fill:' + self.fill + '; stroke:' + self.stroke + '; stroke-width:' + self.strokeWidth) 
             self._svgElements.append(p)
         self._pointsOfPolyline = []

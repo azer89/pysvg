@@ -9,7 +9,7 @@ from core import BaseElement
 
   
          
-class Script(BaseElement, CoreAttrib, XLinkAttrib):
+class script(BaseElement, CoreAttrib, XLinkAttrib):
     """
     Class representing the script element of an svg doc.
     """

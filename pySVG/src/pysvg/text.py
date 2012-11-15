@@ -7,7 +7,7 @@ For licensing information please refer to license.txt
 from attributes import *
 from core import BaseElement, PointAttrib, DeltaPointAttrib, RotateAttrib
 
-class AltGlyphDef(BaseElement, CoreAttrib):
+class altGlyphDef(BaseElement, CoreAttrib):
     """
     Class representing the altGlyphDef element of an svg doc.
     """
@@ -15,7 +15,7 @@ class AltGlyphDef(BaseElement, CoreAttrib):
         BaseElement.__init__(self, 'altGlypfDef')
         self.setKWARGS(**kwargs)
         
-class AltGlyphItem(BaseElement, CoreAttrib):
+class altGlyphItem(BaseElement, CoreAttrib):
     """
     Class representing the altGlyphItem element of an svg doc.
     """
@@ -23,7 +23,7 @@ class AltGlyphItem(BaseElement, CoreAttrib):
         BaseElement.__init__(self, 'altGlypfItem')
         self.setKWARGS(**kwargs)
 
-class GlyphRef(BaseElement, CoreAttrib, ExternalAttrib, StyleAttrib, FontAttrib, XLinkAttrib, PaintAttrib, PointAttrib, DeltaPointAttrib):
+class glyphRef(BaseElement, CoreAttrib, ExternalAttrib, StyleAttrib, FontAttrib, XLinkAttrib, PaintAttrib, PointAttrib, DeltaPointAttrib):
     """
     Class representing the glyphRef element of an svg doc.
     """
@@ -46,7 +46,7 @@ class GlyphRef(BaseElement, CoreAttrib, ExternalAttrib, StyleAttrib, FontAttrib,
     def get_lengthAdjust(self):
         return self._attributes.get('lengthAdjust')
 
-class AltGlyph(GlyphRef, ConditionalAttrib, GraphicalEventsAttrib, OpacityAttrib, GraphicsAttrib, CursorAttrib, FilterAttrib, MaskAttrib, ClipAttrib, TextContentAttrib, RotateAttrib):
+class altGlyph(glyphRef, ConditionalAttrib, GraphicalEventsAttrib, OpacityAttrib, GraphicsAttrib, CursorAttrib, FilterAttrib, MaskAttrib, ClipAttrib, TextContentAttrib, RotateAttrib):
     """
     Class representing the altGlyph element of an svg doc.
     """
@@ -59,7 +59,7 @@ class AltGlyph(GlyphRef, ConditionalAttrib, GraphicalEventsAttrib, OpacityAttrib
     def get_textLength(self):
         return self._attributes.get('textLength')
 
-class TextPath(BaseElement, CoreAttrib, ConditionalAttrib, ExternalAttrib, StyleAttrib, XLinkAttrib, FontAttrib, PaintAttrib, GraphicalEventsAttrib, OpacityAttrib, GraphicsAttrib, CursorAttrib, FilterAttrib, MaskAttrib, ClipAttrib, TextContentAttrib):
+class textPath(BaseElement, CoreAttrib, ConditionalAttrib, ExternalAttrib, StyleAttrib, XLinkAttrib, FontAttrib, PaintAttrib, GraphicalEventsAttrib, OpacityAttrib, GraphicsAttrib, CursorAttrib, FilterAttrib, MaskAttrib, ClipAttrib, TextContentAttrib):
     """
     Class representing the textPath element of an svg doc.
     """
@@ -92,7 +92,7 @@ class TextPath(BaseElement, CoreAttrib, ConditionalAttrib, ExternalAttrib, Style
     def get_spacing(self):
         return self._attributes.get('spacing')
 
-class Tref(BaseElement, CoreAttrib, ConditionalAttrib, ExternalAttrib, StyleAttrib, XLinkAttrib, PointAttrib, DeltaPointAttrib, RotateAttrib, GraphicalEventsAttrib, PaintAttrib, FontAttrib, OpacityAttrib, GraphicsAttrib, CursorAttrib, FilterAttrib, MaskAttrib, ClipAttrib, TextContentAttrib):
+class tref(BaseElement, CoreAttrib, ConditionalAttrib, ExternalAttrib, StyleAttrib, XLinkAttrib, PointAttrib, DeltaPointAttrib, RotateAttrib, GraphicalEventsAttrib, PaintAttrib, FontAttrib, OpacityAttrib, GraphicsAttrib, CursorAttrib, FilterAttrib, MaskAttrib, ClipAttrib, TextContentAttrib):
     """
     Class representing the tref element of an svg doc.
     """
@@ -110,7 +110,7 @@ class Tref(BaseElement, CoreAttrib, ConditionalAttrib, ExternalAttrib, StyleAttr
     def get_lengthAdjust(self):
         return self._attributes.get('lengthAdjust')
 
-class Tspan(BaseElement, CoreAttrib, ConditionalAttrib, ExternalAttrib, StyleAttrib, PointAttrib, DeltaPointAttrib, RotateAttrib, GraphicalEventsAttrib, PaintAttrib, FontAttrib, OpacityAttrib, GraphicsAttrib, CursorAttrib, FilterAttrib, MaskAttrib, ClipAttrib, TextContentAttrib):
+class tspan(BaseElement, CoreAttrib, ConditionalAttrib, ExternalAttrib, StyleAttrib, PointAttrib, DeltaPointAttrib, RotateAttrib, GraphicalEventsAttrib, PaintAttrib, FontAttrib, OpacityAttrib, GraphicsAttrib, CursorAttrib, FilterAttrib, MaskAttrib, ClipAttrib, TextContentAttrib):
     """
     Class representing the tspan element of an svg doc.
     """
@@ -135,7 +135,7 @@ class Tspan(BaseElement, CoreAttrib, ConditionalAttrib, ExternalAttrib, StyleAtt
     def get_lengthAdjust(self):
         return self._attributes.get('lengthAdjust')
     
-class Text(BaseElement, CoreAttrib, ConditionalAttrib, ExternalAttrib, StyleAttrib, PointAttrib, DeltaPointAttrib, RotateAttrib, GraphicalEventsAttrib, PaintAttrib, FontAttrib, OpacityAttrib, GraphicsAttrib, CursorAttrib, FilterAttrib, MaskAttrib, ClipAttrib, TextContentAttrib, TextAttrib):
+class text(BaseElement, CoreAttrib, ConditionalAttrib, ExternalAttrib, StyleAttrib, PointAttrib, DeltaPointAttrib, RotateAttrib, GraphicalEventsAttrib, PaintAttrib, FontAttrib, OpacityAttrib, GraphicsAttrib, CursorAttrib, FilterAttrib, MaskAttrib, ClipAttrib, TextContentAttrib, TextAttrib):
     """
     Class representing the text element of an svg doc.
     """

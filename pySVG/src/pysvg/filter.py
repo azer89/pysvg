@@ -7,7 +7,7 @@ For licensing information please refer to license.txt
 from attributes import *
 from core import BaseElement, DeltaPointAttrib, PointAttrib, DimensionAttrib
 
-class Filter(BaseElement, CoreAttrib, XLinkAttrib, ExternalAttrib, StyleAttrib, PresentationAttributes_All, PointAttrib, DimensionAttrib):
+class filter(BaseElement, CoreAttrib, XLinkAttrib, ExternalAttrib, StyleAttrib, PresentationAttributes_All, PointAttrib, DimensionAttrib):
     """
     Class representing the filter element of an svg doc.
     """
@@ -37,7 +37,7 @@ class Filter(BaseElement, CoreAttrib, XLinkAttrib, ExternalAttrib, StyleAttrib, 
     def get_filterRes(self):
         return self._attributes.get('filterRes')
         
-class FeComponentTransfer(BaseElement, CoreAttrib, FilterColorAttrib, FilterPrimitiveWithInAttrib):
+class feComponentTransfer(BaseElement, CoreAttrib, FilterColorAttrib, FilterPrimitiveWithInAttrib):
     """
     Class representing the feComponentTransfer element of an svg doc.
     """
@@ -46,7 +46,7 @@ class FeComponentTransfer(BaseElement, CoreAttrib, FilterColorAttrib, FilterPrim
         self.setKWARGS(**kwargs)
         
 
-class FeBlend(FeComponentTransfer):
+class feBlend(feComponentTransfer):
     """
     Class representing the feBlend element of an svg doc.
     """
@@ -66,7 +66,7 @@ class FeBlend(FeComponentTransfer):
     def get_mode(self):
         return self._attributes.get('mode')
 
-class FeColorMatrix(FeComponentTransfer):
+class feColorMatrix(feComponentTransfer):
     """
     Class representing the feColorMatrix element of an svg doc.
     """
@@ -86,7 +86,7 @@ class FeColorMatrix(FeComponentTransfer):
     def get_values(self):
         return self._attributes.get('values')    
 
-class FeComposite(FeComponentTransfer):
+class feComposite(feComponentTransfer):
     """
     Class representing the feComposite element of an svg doc.
     """
@@ -130,7 +130,7 @@ class FeComposite(FeComponentTransfer):
     def get_k4(self):
         return self._attributes.get('k4')
 
-class FeConvolveMatrix(FeComponentTransfer):
+class feConvolveMatrix(feComponentTransfer):
     """
     Class representing the feConvolveMatrix element of an svg doc.
     """
@@ -192,7 +192,7 @@ class FeConvolveMatrix(FeComponentTransfer):
     def get_preserveAlpha(self):
         return self._attributes.get('preserveAlpha')
 
-class FeDiffuseLighting(FeComponentTransfer, StyleAttrib, PaintAttrib, PresentationAttributes_LightingEffects):
+class feDiffuseLighting(feComponentTransfer, StyleAttrib, PaintAttrib, PresentationAttributes_LightingEffects):
     """
     Class representing the feDiffuseLighting element of an svg doc.
     """
@@ -218,7 +218,7 @@ class FeDiffuseLighting(FeComponentTransfer, StyleAttrib, PaintAttrib, Presentat
     def get_kernelUnitLength(self):
         return self._attributes.get('kernelUnitLength')
 
-class FeDisplacementMap(FeComponentTransfer):
+class feDisplacementMap(feComponentTransfer):
     """
     Class representing the feDisplacementMap element of an svg doc.
     """
@@ -250,7 +250,7 @@ class FeDisplacementMap(FeComponentTransfer):
     def get_yChannelSelector(self):
         return self._attributes.get('yChannelSelector')
 
-class FeFlood(FeComponentTransfer, StyleAttrib, PaintAttrib, PresentationAttributes_feFlood):
+class feFlood(feComponentTransfer, StyleAttrib, PaintAttrib, PresentationAttributes_feFlood):
     """
     Class representing the feFlood element of an svg doc.
     """
@@ -264,7 +264,7 @@ class FeFlood(FeComponentTransfer, StyleAttrib, PaintAttrib, PresentationAttribu
         self.set_flood_opacity(flood_opacity)
         self.setKWARGS(**kwargs)
     
-class FeGaussianBlur(FeComponentTransfer):
+class feGaussianBlur(feComponentTransfer):
     """
     Class representing the feGaussianBlur element of an svg doc.
     """
@@ -283,7 +283,7 @@ class FeGaussianBlur(FeComponentTransfer):
     def get_stdDeviation(self):
         return self._attributes.get('stdDeviation')
 
-class FeImage(BaseElement, CoreAttrib, XLinkAttrib, FilterColorAttrib, FilterPrimitiveAttrib, ExternalAttrib, StyleAttrib, PresentationAttributes_All):
+class feImage(BaseElement, CoreAttrib, XLinkAttrib, FilterColorAttrib, FilterPrimitiveAttrib, ExternalAttrib, StyleAttrib, PresentationAttributes_All):
     """
     Class representing the feImage element of an svg doc.
     """
@@ -297,7 +297,7 @@ class FeImage(BaseElement, CoreAttrib, XLinkAttrib, FilterColorAttrib, FilterPri
         self.set_result(result)
         self.setKWARGS(**kwargs)
 
-class FeMerge(BaseElement, CoreAttrib, FilterPrimitiveAttrib):
+class feMerge(BaseElement, CoreAttrib, FilterPrimitiveAttrib):
     """
     Class representing the feMerge element of an svg doc.
     """
@@ -309,7 +309,7 @@ class FeMerge(BaseElement, CoreAttrib, FilterPrimitiveAttrib):
         self.set_width(width)
         self.setKWARGS(**kwargs)
        
-class FeMergeNode(BaseElement, CoreAttrib, FilterColorAttrib, FilterPrimitiveWithInAttrib):
+class feMergeNode(BaseElement, CoreAttrib, FilterColorAttrib, FilterPrimitiveWithInAttrib):
     """
     Class representing the feMergeNode element of an svg doc.
     """
@@ -318,7 +318,7 @@ class FeMergeNode(BaseElement, CoreAttrib, FilterColorAttrib, FilterPrimitiveWit
         self.set_in(inValue)
         self.setKWARGS(**kwargs)
 
-class FeMorphology(FeComponentTransfer):
+class feMorphology(feComponentTransfer):
     """
     Class representing the feMorphology element of an svg doc.
     """
@@ -342,7 +342,7 @@ class FeMorphology(FeComponentTransfer):
     def get_radius(self):
         return self._attributes.get('radius')
 
-class FeOffset(FeComponentTransfer, DeltaPointAttrib):
+class feOffset(feComponentTransfer, DeltaPointAttrib):
     """
     Class representing the feOffset element of an svg doc.
     """
@@ -353,7 +353,7 @@ class FeOffset(FeComponentTransfer, DeltaPointAttrib):
         self.set_dy(dy)
         self.setKWARGS(**kwargs)
 
-class FeSpecularLighting(FeComponentTransfer, StyleAttrib, PaintAttrib, PresentationAttributes_LightingEffects):
+class feSpecularLighting(feComponentTransfer, StyleAttrib, PaintAttrib, PresentationAttributes_LightingEffects):
     """
     Class representing the feSpecularLighting element of an svg doc.
     """
@@ -386,7 +386,7 @@ class FeSpecularLighting(FeComponentTransfer, StyleAttrib, PaintAttrib, Presenta
     def get_kernelUnitLength(self):
         return self._attributes.get('kernelUnitLength')    
     
-class FeTile(FeComponentTransfer):
+class feTile(feComponentTransfer):
     """
     Class representing the feTile element of an svg doc.
     """
@@ -427,7 +427,7 @@ class feTurbulence(BaseElement, CoreAttrib, FilterColorAttrib, FilterPrimitiveAt
     def get_type(self):
         return self._attributes.get('type')
 
-class FeDistantLight(BaseElement, CoreAttrib):
+class feDistantLight(BaseElement, CoreAttrib):
     """
     Class representing the feDistantLight element of an svg doc.
     """
@@ -447,7 +447,7 @@ class FeDistantLight(BaseElement, CoreAttrib):
     def get_elevation(self):
         return self._attributes.get('elevation')
 
-class FePointLight(BaseElement, CoreAttrib, PointAttrib):
+class fePointLight(BaseElement, CoreAttrib, PointAttrib):
     """
     Class representing the fePointLight element of an svg doc.
     """
@@ -463,7 +463,7 @@ class FePointLight(BaseElement, CoreAttrib, PointAttrib):
     def get_z(self):
         return self._attributes.get('z')
 
-class FeSpotLight(FePointLight):
+class feSpotLight(fePointLight):
     """
     Class representing the feSpotLight element of an svg doc.
     """
@@ -504,7 +504,7 @@ class FeSpotLight(FePointLight):
     def get_limitingConeAngle(self):
         return self._attributes.get('limitingConeAngle')
     
-class FeFuncR(BaseElement, CoreAttrib):
+class feFuncR(BaseElement, CoreAttrib):
     """
     Class representing the feFuncR element of an svg doc.
     """
@@ -554,7 +554,7 @@ class FeFuncR(BaseElement, CoreAttrib):
     def get_offset(self):
         return self._attributes.get('offset')
 
-class FeFuncG(FeFuncR):
+class feFuncG(feFuncR):
     """
     Class representing the feFuncG element of an svg doc.
     """
@@ -569,7 +569,7 @@ class FeFuncG(FeFuncR):
         self.set_offset(offset)
         self.setKWARGS(**kwargs)
         
-class FeFuncB(FeFuncR):
+class feFuncB(feFuncR):
     """
     Class representing the feFuncB element of an svg doc.
     """
@@ -584,7 +584,7 @@ class FeFuncB(FeFuncR):
         self.set_offset(offset)
         self.setKWARGS(**kwargs)
         
-class FeFuncA(FeFuncR):
+class feFuncA(feFuncR):
     """
     Class representing the feFuncA element of an svg doc.
     """

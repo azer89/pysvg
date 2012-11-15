@@ -17,11 +17,11 @@ Inheritance diagram for ``pysvg.shape``:
 Classes
 -------
 
-:class:`Circle`
+:class:`circle`
 ~~~~~~~~~~~~~~~
 
 
-.. autoclass:: Circle
+.. autoclass:: circle
   :members:
   :undoc-members:
   :show-inheritance:
@@ -29,11 +29,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`Ellipse`
+:class:`ellipse`
 ~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: Ellipse
+.. autoclass:: ellipse
   :members:
   :undoc-members:
   :show-inheritance:
@@ -41,11 +41,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`Line`
+:class:`line`
 ~~~~~~~~~~~~~
 
 
-.. autoclass:: Line
+.. autoclass:: line
   :members:
   :undoc-members:
   :show-inheritance:
@@ -53,11 +53,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`Path`
+:class:`path`
 ~~~~~~~~~~~~~
 
 
-.. autoclass:: Path
+.. autoclass:: path
   :members:
   :undoc-members:
   :show-inheritance:
@@ -65,11 +65,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`Polygon`
+:class:`polygon`
 ~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: Polygon
+.. autoclass:: polygon
   :members:
   :undoc-members:
   :show-inheritance:
@@ -77,11 +77,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`Polyline`
+:class:`polyline`
 ~~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: Polyline
+.. autoclass:: polyline
   :members:
   :undoc-members:
   :show-inheritance:
@@ -89,11 +89,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`Rect`
+:class:`rect`
 ~~~~~~~~~~~~~
 
 
-.. autoclass:: Rect
+.. autoclass:: rect
   :members:
   :undoc-members:
   :show-inheritance:

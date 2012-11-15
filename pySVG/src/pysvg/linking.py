@@ -9,7 +9,7 @@ from core import BaseElement
 
   
         
-class A(BaseElement, CoreAttrib, ConditionalAttrib, StyleAttrib, ExternalAttrib, PresentationAttributes_All, GraphicalEventsAttrib, XLinkAttrib):
+class a(BaseElement, CoreAttrib, ConditionalAttrib, StyleAttrib, ExternalAttrib, PresentationAttributes_All, GraphicalEventsAttrib, XLinkAttrib):
     """
     Class representing the a element of an svg doc.
     """
@@ -27,7 +27,7 @@ class A(BaseElement, CoreAttrib, ConditionalAttrib, StyleAttrib, ExternalAttrib,
     def get_target(self):
         return self._attributes.get('target')
 
-class View(BaseElement, CoreAttrib, ExternalAttrib):
+class view(BaseElement, CoreAttrib, ExternalAttrib):
     """
     Class representing the view element of an svg doc.
     """

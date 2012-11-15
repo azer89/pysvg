@@ -17,11 +17,11 @@ Inheritance diagram for ``pysvg.filter``:
 Classes
 -------
 
-:class:`FeBlend`
+:class:`feBlend`
 ~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: FeBlend
+.. autoclass:: feBlend
   :members:
   :undoc-members:
   :show-inheritance:
@@ -29,11 +29,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`FeColorMatrix`
+:class:`feColorMatrix`
 ~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: FeColorMatrix
+.. autoclass:: feColorMatrix
   :members:
   :undoc-members:
   :show-inheritance:
@@ -41,11 +41,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`FeComponentTransfer`
+:class:`feComponentTransfer`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: FeComponentTransfer
+.. autoclass:: feComponentTransfer
   :members:
   :undoc-members:
   :show-inheritance:
@@ -53,11 +53,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`FeComposite`
+:class:`feComposite`
 ~~~~~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: FeComposite
+.. autoclass:: feComposite
   :members:
   :undoc-members:
   :show-inheritance:
@@ -65,11 +65,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`FeConvolveMatrix`
+:class:`feConvolveMatrix`
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: FeConvolveMatrix
+.. autoclass:: feConvolveMatrix
   :members:
   :undoc-members:
   :show-inheritance:
@@ -77,11 +77,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`FeDiffuseLighting`
+:class:`feDiffuseLighting`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: FeDiffuseLighting
+.. autoclass:: feDiffuseLighting
   :members:
   :undoc-members:
   :show-inheritance:
@@ -89,11 +89,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`FeDisplacementMap`
+:class:`feDisplacementMap`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: FeDisplacementMap
+.. autoclass:: feDisplacementMap
   :members:
   :undoc-members:
   :show-inheritance:
@@ -101,11 +101,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`FeDistantLight`
+:class:`feDistantLight`
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: FeDistantLight
+.. autoclass:: feDistantLight
   :members:
   :undoc-members:
   :show-inheritance:
@@ -113,11 +113,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`FeFlood`
+:class:`feFlood`
 ~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: FeFlood
+.. autoclass:: feFlood
   :members:
   :undoc-members:
   :show-inheritance:
@@ -125,11 +125,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`FeFuncA`
+:class:`feFuncA`
 ~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: FeFuncA
+.. autoclass:: feFuncA
   :members:
   :undoc-members:
   :show-inheritance:
@@ -137,11 +137,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`FeFuncB`
+:class:`feFuncB`
 ~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: FeFuncB
+.. autoclass:: feFuncB
   :members:
   :undoc-members:
   :show-inheritance:
@@ -149,11 +149,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`FeFuncG`
+:class:`feFuncG`
 ~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: FeFuncG
+.. autoclass:: feFuncG
   :members:
   :undoc-members:
   :show-inheritance:
@@ -161,11 +161,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`FeFuncR`
+:class:`feFuncR`
 ~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: FeFuncR
+.. autoclass:: feFuncR
   :members:
   :undoc-members:
   :show-inheritance:
@@ -173,11 +173,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`FeGaussianBlur`
+:class:`feGaussianBlur`
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: FeGaussianBlur
+.. autoclass:: feGaussianBlur
   :members:
   :undoc-members:
   :show-inheritance:
@@ -185,11 +185,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`FeImage`
+:class:`feImage`
 ~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: FeImage
+.. autoclass:: feImage
   :members:
   :undoc-members:
   :show-inheritance:
@@ -197,11 +197,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`FeMerge`
+:class:`feMerge`
 ~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: FeMerge
+.. autoclass:: feMerge
   :members:
   :undoc-members:
   :show-inheritance:
@@ -209,11 +209,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`FeMergeNode`
+:class:`feMergeNode`
 ~~~~~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: FeMergeNode
+.. autoclass:: feMergeNode
   :members:
   :undoc-members:
   :show-inheritance:
@@ -221,11 +221,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`FeMorphology`
+:class:`feMorphology`
 ~~~~~~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: FeMorphology
+.. autoclass:: feMorphology
   :members:
   :undoc-members:
   :show-inheritance:
@@ -233,11 +233,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`FeOffset`
+:class:`feOffset`
 ~~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: FeOffset
+.. autoclass:: feOffset
   :members:
   :undoc-members:
   :show-inheritance:
@@ -245,11 +245,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`FePointLight`
+:class:`fePointLight`
 ~~~~~~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: FePointLight
+.. autoclass:: fePointLight
   :members:
   :undoc-members:
   :show-inheritance:
@@ -257,11 +257,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`FeSpecularLighting`
+:class:`feSpecularLighting`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: FeSpecularLighting
+.. autoclass:: feSpecularLighting
   :members:
   :undoc-members:
   :show-inheritance:
@@ -269,11 +269,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`FeSpotLight`
+:class:`feSpotLight`
 ~~~~~~~~~~~~~~~~~~~~
 
 
-.. autoclass:: FeSpotLight
+.. autoclass:: feSpotLight
   :members:
   :undoc-members:
   :show-inheritance:
@@ -281,23 +281,11 @@ Classes
 
   .. automethod:: __init__
 
-:class:`FeTile`
+:class:`feTile`
 ~~~~~~~~~~~~~~~
 
 
-.. autoclass:: FeTile
-  :members:
-  :undoc-members:
-  :show-inheritance:
-  :inherited-members:
-
-  .. automethod:: __init__
-
-:class:`Filter`
-~~~~~~~~~~~~~~~
-
-
-.. autoclass:: Filter
+.. autoclass:: feTile
   :members:
   :undoc-members:
   :show-inheritance:
@@ -310,6 +298,18 @@ Classes
 
 
 .. autoclass:: feTurbulence
+  :members:
+  :undoc-members:
+  :show-inheritance:
+  :inherited-members:
+
+  .. automethod:: __init__
+
+:class:`filter`
+~~~~~~~~~~~~~~~
+
+
+.. autoclass:: filter
   :members:
   :undoc-members:
   :show-inheritance:

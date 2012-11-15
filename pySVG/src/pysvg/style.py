@@ -9,7 +9,7 @@ from core import BaseElement
 
   
         
-class Style(BaseElement, CoreAttrib, XLinkAttrib):
+class style(BaseElement, CoreAttrib, XLinkAttrib):
     """
     Class representing the style element of an svg doc.
     """

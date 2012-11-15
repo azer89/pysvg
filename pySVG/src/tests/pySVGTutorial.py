@@ -12,69 +12,69 @@ from pysvg.style import *
 from pysvg.text import *
 from pysvg.builders import *
 
-class MyDropShadow(Filter):    
+class MyDropShadow(filter):    
     def __init__(self):
-        Filter.__init__(self)
+        filter.__init__(self)
         self.set_x('-0.25')
         self.set_y('-0.25')
         self.set_width(3)
         self.set_height(3)
         self.set_id('MyDropShadow')
-        self.myGauss = FeGaussianBlur()
+        self.myGauss = feGaussianBlur()
         self.myGauss.set_id('DropShadowGauss')
         self.myGauss.set_stdDeviation(1.0)
         self.myGauss.set_in('SourceAlpha')
         self.myGauss.set_result('blur')
         self.addElement(self.myGauss)
-        self.feColorMatrix = FeColorMatrix()
+        self.feColorMatrix = feColorMatrix()
         self.feColorMatrix.set_id('DropShadowColorMatrix')
         self.feColorMatrix.set_result('bluralpha')
         self.feColorMatrix.set_type('matrix')
         self.feColorMatrix.set_values('1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.500000 0 ')
         self.addElement(self.feColorMatrix)
-        self.feOffset = FeOffset()
+        self.feOffset = feOffset()
         self.feOffset.set_id('DropShadowOffset')
         self.feOffset.set_dx(1.0)
         self.feOffset.set_dy(1.0)
         self.feOffset.set_in('bluralpha')
         self.feOffset.set_result('offsetBlur')
         self.addElement(self.feOffset)
-        self.feMerge = FeMerge()
+        self.feMerge = feMerge()
         self.feMerge.set_id('DropShadowMerge')
         self.addElement(self.feMerge)
-        self.firstFeMergeNode = FeMergeNode()
+        self.firstFeMergeNode = feMergeNode()
         self.feMerge.addElement(self.firstFeMergeNode)
         self.firstFeMergeNode.set_id('DropShadowMergeNode1')
         self.firstFeMergeNode.set_in('offsetBlur')
-        self.secondFeMergeNode = FeMergeNode()
+        self.secondFeMergeNode = feMergeNode()
         self.feMerge.addElement(self.secondFeMergeNode)
         self.secondFeMergeNode.set_id('DropShadowMergeNode2')
         self.secondFeMergeNode.set_in('SourceGraphic')
 
 
 def MyImage():
-    s = Svg()
-    i = Image(x=80, y=25, width=88, height=31)
+    s = svg()
+    i = image(x=80, y=25, width=88, height=31)
     i.set_xlink_href('http://img0.gmodules.com/ig/images/googlemail.gif')
     s.addElement(i)
-    i = Image(x=80, y=125, width=88, height=31)
+    i = image(x=80, y=125, width=88, height=31)
     i.set_xlink_href('../sourceimages/images.jpg')
     s.addElement(i)
     print s.getXML()
     s.save('./testoutput/10_Image.svg')
     
       
-def MyLinearGradient():
-    mySVG = Svg("test")
-    d = Defs()
+def MylinearGradient():
+    mySVG = svg("test")
+    d = defs()
   
-    lg = LinearGradient()
+    lg = linearGradient()
     lg.set_id("orange_red")
-    s = Stop(offset="0%")
+    s = stop(offset="0%")
     s.set_stop_color('rgb(255,255,0)')
     s.set_stop_opacity(1)
     lg.addElement(s)
-    s = Stop(offset="100%")
+    s = stop(offset="100%")
     s.set_stop_color('rgb(255,0,0)')
     s.set_stop_opacity(1)
     lg.addElement(s)
@@ -86,19 +86,19 @@ def MyLinearGradient():
     mySVG.addElement(d)
     mySVG.addElement(e)
     print mySVG.getXML()
-    mySVG.save('./testoutput/8_LinearGradient.svg')
+    mySVG.save('./testoutput/8_linearGradient.svg')
  
 def MyRadialGradient():
-    mySVG = Svg()
-    d = Defs()
+    mySVG = svg()
+    d = defs()
    
-    lg = RadialGradient()
+    lg = radialGradient()
     lg.set_id("grey_blue")
-    s = Stop(offset='0%')
+    s = stop(offset='0%')
     s.set_stop_color('rgb(200,200,200)')
     s.set_stop_opacity(1)
     lg.addElement(s)
-    s = Stop(offset='100%')
+    s = stop(offset='100%')
     s.set_stop_color('rgb(0,0,255)')
     s.set_stop_opacity(1)
     lg.addElement(s)
@@ -113,25 +113,25 @@ def MyRadialGradient():
     mySVG.save('./testoutput/9_RadialGradient.svg')
 
 def Grouping():
-    s = Svg()
+    s = svg()
   
     # testing container
     myStyle = StyleBuilder()
     myStyle.setStrokeWidth(2)
     myStyle.setStroke("green")
 
-    group = G()
+    group = g()
     group.set_style(myStyle.getStyle())
-    group.addElement(Line(300, 300, 600, 600))
-    group.addElement(Circle(500, 500, 50))
+    group.addElement(line(300, 300, 600, 600))
+    group.addElement(circle(500, 500, 50))
     s.addElement(group)
   
-    group = G()
+    group = g()
     group.set_style(myStyle.getStyle())
     style_dict = {"stroke":"#000000", "fill":"none" , "stroke-width":"49" , "stroke-opacity":"0.027276"}
-    p = Path(pathData="M 300 100 A 1,1 0 0 1 802,800")
+    p = path(pathData="M 300 100 A 1,1 0 0 1 802,800")
     p.set_style(StyleBuilder(style_dict).getStyle())
-    p2 = Path(pathData="M 100 300 A 1,1 0 0 1 802,800")
+    p2 = path(pathData="M 100 300 A 1,1 0 0 1 802,800")
     p2.set_style(StyleBuilder(style_dict).getStyle())
     group.addElement(p)
     group.addElement(p2)
@@ -142,8 +142,8 @@ def Grouping():
 
 def ComplexShapes():
     oh = ShapeBuilder()
-    mySVG = Svg("test")
-    d = Defs()
+    mySVG = svg("test")
+    d = defs()
     d.addElement(MyDropShadow())
     mySVG.addElement(d)
 
@@ -161,13 +161,13 @@ def ComplexShapes():
     sh.setFilling('#EEE')
     sh.setStroke('#00F')
     sh.setStrokeWidth('2px')
-    path1 = Path('M 40,530 L 100,560 L 60,520 Z', style=sh.getStyle())
+    path1 = path('M 40,530 L 100,560 L 60,520 Z', style=sh.getStyle())
     
     sh2 = StyleBuilder()
     sh2.setFilling('#FFC')
     sh2.setStroke('#00F')
     sh2.setStrokeWidth('2px')
-    path2 = Path(style=sh2.getStyle())
+    path2 = path(style=sh2.getStyle())
     path2.appendMoveToPath(190, 520, False)
     # as you can see we can mix strings and ints without trouble
     path2.appendCubicCurveToPath('+0', '+0', 30, 30, -60, 30, True)
@@ -177,7 +177,7 @@ def ComplexShapes():
     sh3.setFilling('none')
     sh3.setStroke('#00F')
     sh3.setStrokeWidth('2px')
-    path3 = Path('M 230,530', style=sh3.getStyle())
+    path3 = path('M 230,530', style=sh3.getStyle())
     path3.appendQuadraticCurveToPath(0, 30, 30, 0)
     path3.appendQuadraticCurveToPath(30, -30, 30, 0)
     path3.appendQuadraticCurveToPath(-0, 30, 30, 0)
@@ -192,7 +192,7 @@ def ComplexShapes():
 
 def Shapes():
     oh = ShapeBuilder()
-    s = Svg("test")
+    s = svg("test")
   
     s.addElement(oh.createRect(0, 0, 400, 200, 12, 12, strokewidth=2, stroke='navy'))
     s.addElement(oh.createRect(100, 50, 200, 100, strokewidth=2, stroke='navy', fill='yellow'))
@@ -203,32 +203,32 @@ def Shapes():
     s.addElement(oh.createLine(0, 0, 300, 300, strokewidth=2, stroke="black"))
     s.save('./testoutput/4_Shapes.svg')
   
-def MyLine():
-    s = Svg("test")
+def Myline():
+    s = svg("test")
     myStyle = StyleBuilder()
     myStyle.setStrokeWidth(2)
     myStyle.setStroke('black')
-    l = Line(0, 0, 300, 300)
+    l = line(0, 0, 300, 300)
     l.set_style(myStyle.getStyle())
     s.addElement(l)
     # easier method with ShapeBuilder
     oh = ShapeBuilder()
     s.addElement(oh.createLine(10, 0, 300, 300, strokewidth=2, stroke="blue"))
-    s.save('./testoutput/5_Line.svg')
+    s.save('./testoutput/5_line.svg')
 
-def TextFeatures():
-    s = Svg("test")
+def textFeatures():
+    s = svg("test")
     myStyle = StyleBuilder()
     myStyle.setFontFamily(fontfamily="Verdana")
     myStyle.setFontSize('5em')
     myStyle.setFilling(fill="blue")
-    t1 = Text("Verdana, blue, 5em", 0, 100)
+    t1 = text("Verdana, blue, 5em", 0, 100)
     t1.set_style(myStyle.getStyle())
-    t2 = Text("pySVG simple", 0, 200)
+    t2 = text("pySVG simple", 0, 200)
     s.addElement(t1)
     s.addElement(t2)
   
-    r = Rect(350, 250, 100, 100, id="myRect")
+    r = rect(350, 250, 100, 100, id="myrect")
     r.set_fill("green")
     s.addElement(r)
   
@@ -241,7 +241,7 @@ def TextFeatures():
     myStyle.setFillOpacity('0.5')
     myStyle.setFillRule('evenodd')
   
-    t3 = Text("Times, italic, 2em, bold, opacity=0.5, fillrule=evenodd", 0, 300)
+    t3 = text("Times, italic, 2em, bold, opacity=0.5, fillrule=evenodd", 0, 300)
     t3.set_style(myStyle.getStyle())
     s.addElement(t3)
 
@@ -252,38 +252,38 @@ def TextFeatures():
     myStyle.setFilling(fill="red")
     myStyle.setFillOpacity('0.5')
     # myStyle.fill="blue"
-    t4 = Text("Times, italic, 2em, non bold, opacity=0.5", 0, 400)
+    t4 = text("Times, italic, 2em, non bold, opacity=0.5", 0, 400)
     t4.set_style(myStyle.getStyle())
     s.addElement(t4)
 
   
     print s.getXML()
-    s.save('./testoutput/3_TextFeatures.svg')
+    s.save('./testoutput/3_textFeatures.svg')
 
 def HelloWorld2():
-    s = Svg() 
+    s = svg() 
     myStyle = StyleBuilder()
     myStyle.setFontFamily(fontfamily="Verdana")
     myStyle.setFontSize('5em')  # no need for the keywords all the time
     myStyle.setFilling("blue")
-    t1 = Text("Hello World", 0, 100)
+    t1 = text("Hello World", 0, 100)
     t1.set_style(myStyle.getStyle())
     s.addElement(t1)
     print s.getXML()
     s.save('./testoutput/2_HelloWorld2.svg')
 
 def HelloWorld1():
-    s = Svg()
-    t = Text("Hello World", 0, 100)
+    s = svg()
+    t = text("Hello World", 0, 100)
     s.addElement(t)
     print s.getXML()
     s.save('./testoutput/1_HelloWorld1.svg', encoding='UTF-8')
 
 def KWARGS():
-    s = Svg() 
+    s = svg() 
     kw = {}
     kw['style'] = 'font-size:20em; font-family:Verdana; fill:blue; '
-    t1 = Text("KWARGS Text", 0, 300, **kw)
+    t1 = text("KWARGS text", 0, 300, **kw)
     s.addElement(t1)
     print s.getXML()
     s.save('./testoutput/KWARGS.svg')
@@ -292,12 +292,12 @@ def KWARGS():
 def tutorialChain():
     HelloWorld1()
     HelloWorld2()
-    TextFeatures()
+    textFeatures()
     Shapes()
-    MyLine()
+    Myline()
     ComplexShapes()
     Grouping()
-    MyLinearGradient()
+    MylinearGradient()
     MyRadialGradient()
     MyImage()
     KWARGS()

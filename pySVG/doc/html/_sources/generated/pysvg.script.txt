@@ -14,11 +14,11 @@ Inheritance diagram for ``pysvg.script``:
 
 .. currentmodule:: pysvg.script
 
-:class:`Script`
+:class:`script`
 ---------------
 
 
-.. autoclass:: Script
+.. autoclass:: script
   :members:
   :undoc-members:
   :show-inheritance:

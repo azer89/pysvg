@@ -39,7 +39,7 @@ class ShapeBuilder:
         """
         style_dict = {'fill':fill, 'stroke-width':strokewidth, 'stroke':stroke}
         myStyle = StyleBuilder(style_dict)
-        c = Circle(cx, cy, r)
+        c = circle(cx, cy, r)
         c.set_style(myStyle.getStyle())
         return c
   
@@ -64,7 +64,7 @@ class ShapeBuilder:
         """
         style_dict = {'fill':fill, 'stroke-width':strokewidth, 'stroke':stroke}
         myStyle = StyleBuilder(style_dict)
-        e = Ellipse(cx, cy, rx, ry)
+        e = ellipse(cx, cy, rx, ry)
         e.set_style(myStyle.getStyle())
         return e
    
@@ -93,7 +93,7 @@ class ShapeBuilder:
         """
         style_dict = {'fill':fill, 'stroke-width':strokewidth, 'stroke':stroke}
         myStyle = StyleBuilder(style_dict)
-        r = Rect(x, y, width, height, rx, ry)
+        r = rect(x, y, width, height, rx, ry)
         r.set_style(myStyle.getStyle())
         return r
       
@@ -112,7 +112,7 @@ class ShapeBuilder:
         """
         style_dict = {'fill':fill, 'stroke-width':strokewidth, 'stroke':stroke}
         myStyle = StyleBuilder(style_dict)
-        p = Polygon(points=points)
+        p = polygon(points=points)
         p.set_style(myStyle.getStyle())
         return p
       
@@ -129,7 +129,7 @@ class ShapeBuilder:
         """
         style_dict = {'fill':'none', 'stroke-width':strokewidth, 'stroke':stroke}
         myStyle = StyleBuilder(style_dict)
-        p = Polyline(points=points)
+        p = polyline(points=points)
         p.set_style(myStyle.getStyle())
         return p
         
@@ -153,7 +153,7 @@ class ShapeBuilder:
         """
         style_dict = {'stroke-width':strokewidth, 'stroke':stroke}
         myStyle = StyleBuilder(style_dict)
-        l = Line(x1, y1, x2, y2)
+        l = line(x1, y1, x2, y2)
         l.set_style(myStyle.getStyle())
         return l
       

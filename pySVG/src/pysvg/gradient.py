@@ -9,7 +9,7 @@ from core import BaseElement, PointAttrib, DimensionAttrib
 
   
         
-class LinearGradient(BaseElement, CoreAttrib, XLinkAttrib, PaintAttrib, StyleAttrib, ExternalAttrib):
+class linearGradient(BaseElement, CoreAttrib, XLinkAttrib, PaintAttrib, StyleAttrib, ExternalAttrib):
     """
     Class representing the linearGradient element of an svg doc.
     """
@@ -56,7 +56,7 @@ class LinearGradient(BaseElement, CoreAttrib, XLinkAttrib, PaintAttrib, StyleAtt
     def get_spreadMethod(self):
         return self._attributes.get('spreadMethod')
     
-class RadialGradient(BaseElement, CoreAttrib, XLinkAttrib, PaintAttrib, StyleAttrib, ExternalAttrib):
+class radialGradient(BaseElement, CoreAttrib, XLinkAttrib, PaintAttrib, StyleAttrib, ExternalAttrib):
     """
     Class representing the radialGradient element of an svg doc.
     """
@@ -109,7 +109,7 @@ class RadialGradient(BaseElement, CoreAttrib, XLinkAttrib, PaintAttrib, StyleAtt
     def get_spreadMethod(self):
         return self._attributes.get('spreadMethod')    
     
-class Stop(BaseElement, CoreAttrib, StyleAttrib, PaintAttrib, GradientAttrib):
+class stop(BaseElement, CoreAttrib, StyleAttrib, PaintAttrib, GradientAttrib):
     """
     Class representing the stop element of an svg doc.
     """
@@ -123,7 +123,7 @@ class Stop(BaseElement, CoreAttrib, StyleAttrib, PaintAttrib, GradientAttrib):
     def get_offset(self):
         return self._attributes.get('offset')    
 
-class Pattern(BaseElement, CoreAttrib, XLinkAttrib, ConditionalAttrib, ExternalAttrib, StyleAttrib, PresentationAttributes_All, PointAttrib, DimensionAttrib):
+class pattern(BaseElement, CoreAttrib, XLinkAttrib, ConditionalAttrib, ExternalAttrib, StyleAttrib, PresentationAttributes_All, PointAttrib, DimensionAttrib):
     """
     Class representing the pattern element of an svg doc.
     """

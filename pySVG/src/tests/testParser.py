@@ -5,7 +5,7 @@ Created on 26.05.2009
 '''
 
 from pysvg import parser
-from pysvg.structure import Svg
+from pysvg.structure import svg
 
 def main():
     anSVG = parser.parse('./sourceimages/TMs10kSVGDemo.svg')
